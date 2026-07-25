@@ -13,12 +13,16 @@ export default function Currencies() {
   ];
 
   return (
-    <div>
-      {currencies.map((coin) => (
-        <Link key={coin.symbol} to={`/price/${coin.symbol}`}>
-          <h2>{coin.name}</h2>
-        </Link>
-      ))}
+    <div className="currencies">
+      {currencies.map((coin) => {
+        const { name, symbol } = coin;
+
+        return (
+          <Link key={symbol} to={`/price/${symbol}`}>
+            <h2>{name}</h2>
+          </Link>
+        );
+      })}
     </div>
   );
 }

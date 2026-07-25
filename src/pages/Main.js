@@ -1,3 +1,3 @@
 export default function Main() {
-  return <h1>Welcome to Crypto Prices</h1>;
+  return <h1>This is the Main Component</h1>;
 }
